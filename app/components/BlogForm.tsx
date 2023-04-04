@@ -48,7 +48,7 @@ const BlogForm = (props: Props) => {
 
 
   return (
-    <form className="flex flex-col space-y-4 w-1/2 mx-auto mt-10">
+    <form className="flex flex-col space-y-4 w-full px-5 md-px-1 md:w-1/2 mx-auto mt-10">
       <div className="flex flex-col space-y-2">
         <Label htmlFor="title">Article Title</Label>
         <Input type="text" placeholder="title here ..." value={blogForm.title} onInput={(e) => handleInput("title", (e.target as HTMLInputElement).value)} />
