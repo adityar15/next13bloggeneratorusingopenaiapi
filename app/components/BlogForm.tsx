@@ -1,11 +1,12 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import Input from "./Input"
 import Label from "./Label"
 import Button from "./Button"
-
+import { useAppDispatch } from "../utils/client/store/hooks"
 import { ArrowPathIcon } from "@heroicons/react/24/solid"
+import { setUser } from "../utils/client/store/userSlice"
 
 type Props = {}
 
@@ -16,6 +17,16 @@ const BlogForm = (props: Props) => {
     category: "",
     author: "",
   })
+
+  const dispatch = useAppDispatch()
+
+  useEffect(()=>{
+    dispatch(setUser({
+      id: 1,
+      name: "Aditya",
+      avatar: "https://media.licdn.com/dms/image/C5603AQEfzRva9L1aQQ/profile-displayphoto-shrink_200_200/0/1574973825117?e=1686182400&v=beta&t=-sPRO8BZzz2_79LXMu8bVsYDRpk_uaR8NL65HWm1Sak"
+    }))
+  }, [dispatch])
 
   const [pending, setPending] = useState<boolean>(false)
 
