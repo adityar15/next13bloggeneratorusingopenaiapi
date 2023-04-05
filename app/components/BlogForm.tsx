@@ -24,7 +24,7 @@ const BlogForm = (props: Props) => {
     dispatch(setUser({
       id: 1,
       name: "Aditya",
-      avatar: "https://media.licdn.com/dms/image/C5603AQEfzRva9L1aQQ/profile-displayphoto-shrink_200_200/0/1574973825117?e=1686182400&v=beta&t=-sPRO8BZzz2_79LXMu8bVsYDRpk_uaR8NL65HWm1Sak"
+      avatar: "avatar_url"
     }))
   }, [dispatch])
 
